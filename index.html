@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Service MeteraServ - Reparații Profesionale</title>
+    <title>Service Auto - Reparații Profesionale</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.js'></script>
 </head>
 <body>
     <!-- Navigație -->
@@ -16,13 +18,14 @@
                 <li><a href="#despre">Despre noi</a></li>
                 <li><a href="#servicii">Servicii</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#programari">Programări</a></li> <!-- Tab nou pentru Programări -->
             </ul>
-        </nav>
+        </nav>        
     </header>
 
     <!-- Pagină principală -->
     <section id="home">
-        <h1>Bine ai venit la Service Auto Metera</h1>
+        <h1>Bine ai venit la MeteraServ</h1>
         <p>Reparații rapide și de încredere pentru mașina ta.</p>
     </section>
 
@@ -35,12 +38,18 @@
     <!-- Servicii -->
     <section id="servicii">
         <h2>Serviciile noastre</h2>
-        <ul>
-            <li>Diagnoză auto</li>
-            <li>Schimb ulei și filtre</li>
-            <li>Inspecție tehnică periodică (ITP)</li>
-            <li>Reparații frâne și sisteme de direcție</li>
-        </ul>
+
+        <div class="service">
+            <img src="images/diagnostic.jpg" alt="Diagnoza auto" style="width: 300px;">
+            <p>Diagnoză auto completă, pentru a detecta orice problemă a mașinii tale.</p>
+            <a href="#contact" class="button">Programează o diagnoză</a>
+        </div>
+
+        <div class="service">
+            <img src="images/schimb-ulei.jpg" alt="Schimb ulei" style="width: 300px;">
+            <p>Schimb rapid de ulei și filtre, pentru o performanță optimă a mașinii.</p>
+            <a href="#contact" class="button">Programează schimbul de ulei</a>
+        </div>
     </section>
 
     <!-- Contact -->
@@ -48,13 +57,41 @@
         <h2>Contactează-ne</h2>
         <p>Email: contact@serviceauto.ro</p>
         <p>Telefon: 0723 456 789</p>
-        <p>Adresa: Str. Oituz, Nr. 49A, Sacele</p>
-    </section>
+        <p>Adresa: Str. Exemplu, Nr. 123, București</p>
 
+        <a href="tel:0723456789" class="button">Sună acum</a>
+    </section>
+    <!-- Tab nou pentru Programări -->
+    <section id="programari">
+        <h2>Programează-te la service</h2>
+        <p>Alege data și ora dorită pentru o programare rapidă.</p>
+    
+        <!-- Calendar interactiv -->
+        <div id="calendar"></div>
+    
+        <!-- Formular de programare -->
+        <form id="form-programare">
+            <label for="nume">Nume:</label>
+            <input type="text" id="nume" name="nume" required>
+    
+            <label for="telefon">Telefon:</label>
+            <input type="tel" id="telefon" name="telefon" required>
+    
+            <label for="data-programare">Data aleasă:</label>
+            <input type="text" id="data-programare" name="data" readonly>
+    
+            <label for="ora">Ora:</label>
+            <input type="time" id="ora" name="ora" required>
+    
+            <button type="submit">Trimite programarea</button>
+        </form>
+    </section>    
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Service Auto Metera. Toate drepturile rezervate.</p>
+        <p>&copy; 2024 Service Auto XYZ. Toate drepturile rezervate.</p>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

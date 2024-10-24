@@ -44,8 +44,8 @@ section {
 }
 
 #home {
-    background: #1e90ff;
-    color: white;
+    background: #45514e4b;
+    color: white(255, 255, 255);
     padding: 100px 0;
     text-align: center;
 }
@@ -63,4 +63,43 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+#programari {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #1e90ff;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
 }
